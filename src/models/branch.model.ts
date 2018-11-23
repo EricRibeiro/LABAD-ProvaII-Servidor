@@ -1,13 +1,13 @@
-import { Entity, model, property } from '@loopback/repository';
+import {Entity, model, property} from '@loopback/repository';
 
 @model()
-export class Customer extends Entity {
+export class Branch extends Entity {
   @property({
     type: 'number',
     id: true,
     required: true,
   })
-  cust_id: number;
+  branch_id: number;
 
   @property({
     type: 'string',
@@ -23,25 +23,19 @@ export class Customer extends Entity {
     type: 'string',
     required: true,
   })
-  cust_type_cd: string;
-
-  @property({
-    type: 'string',
-    required: true,
-  })
-  fed_id: string;
-
-  @property({
-    type: 'string',
-  })
-  postal_code?: string;
+  name: string;
 
   @property({
     type: 'string',
   })
   state?: string;
 
-  constructor(data?: Partial<Customer>) {
+  @property({
+    type: 'string',
+  })
+  zip_code?: string;
+
+  constructor(data?: Partial<Branch>) {
     super(data);
   }
 }
