@@ -6,3 +6,4 @@ export * from './employee.repository';
 export * from './product.repository';
 export * from './product-type.repository';
 export * from './department.repository';
+export * from './business.repository';
